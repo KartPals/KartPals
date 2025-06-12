@@ -1,0 +1,28 @@
+{
+    "$schema": "https://json.schemastore.org/chrome-manifest",
+    "manifest_version": 3,
+    "name": "KartPals",
+    "version": "0.1.0",
+    "description": "A lightweight, customizable, and privacy-focused Smash Karts extension with many features.",
+    "permissions": [
+        "tabs",
+        "scripting",
+        "storage",
+        "browserSettings",
+        "topSites"
+    ],
+    "developer": {
+        "name": "KartPals Team",
+        "url": "https://github.com/KartPals"
+    },
+    "host_permissions": [],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "/**/*.html",
+                "/*.js"
+            ],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

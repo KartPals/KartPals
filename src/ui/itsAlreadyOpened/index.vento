@@ -1,0 +1,56 @@
+<script src="../itsAlreadyOpened.js" type="module"></script>
+
+<main style="
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+">
+  <div style="
+    background: rgba(0,0,0,0.25);
+    border-radius: 24px;
+    padding: 2.5rem 2rem 2rem 2rem;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    max-width: 420px;
+    text-align: center;
+  ">
+    <h1 style="font-size: 2.2rem; margin-bottom: 1.2rem; font-weight: 700;">
+      More and more!<br>
+      I've never seen this before!
+    </h1>
+    <p style="font-size: 1.15rem; margin-bottom: 2rem;">
+      Just kidding, you already have a <b>Smash Karts</b> tab open on shore!
+    </p>
+    <div style="
+      margin: 0 auto 0.5rem auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    ">
+      <span style="
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        margin-bottom: 0.2rem;
+      ">
+        Tabs open:
+      </span>
+      <span style="
+        font-size: 2.8rem;
+        font-weight: bold;
+        color: #ffe066;
+        text-shadow: 0 2px 8px #0004;
+        letter-spacing: 0.05em;
+      ">
+        
+      </span>
+    </div>
+    <svg width="80" height="80" viewBox="0 0 80 80" style="margin-top: 1.5rem;">
+      <circle cx="40" cy="40" r="36" fill="#ffe066" opacity="0.15"/>
+      <circle cx="40" cy="40" r="28" fill="#fff" opacity="0.10"/>
+    </svg>
+  </div>
+</main>
