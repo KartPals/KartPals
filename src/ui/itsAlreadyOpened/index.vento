@@ -1,4 +1,4 @@
-<script src="../itsAlreadyOpened.js" type="module"></script>
+<script src="../itsAlreadyOpened.js"></script>
 
 <main style="
   min-height: 100vh;

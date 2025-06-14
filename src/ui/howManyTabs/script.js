@@ -7,7 +7,11 @@ import { XMLHttpRequest } from "dxhr";
 const tDecoder = new TextDecoder();
 const tEncoder = new TextEncoder();
 
-const { id: tabId } = await chrome.tabs.getCurrent().then((tab) => tab);
+const [currentTab] = await chrome.tabs.query({
+    active: true,
+    currentWindow: true,
+});
+const { id: tabId, url: currentTabUrl } = currentTab;
 
 chrome.tabs.query({ currentWindow: true }, (tabs) => {
     const smashKartsDomains = [

@@ -1,4 +1,5 @@
-//@ts-nocheck I don't consider this file worthy of type checking
+// @ts-nocheck I don't consider this file worthy of type checking
+// TODO: Use ESNext innovations in this file...
 import type Manifest from "wemanifest";
 import jParse from "fjparse";
 import dJson from "../deno.json" with { type: "json" };

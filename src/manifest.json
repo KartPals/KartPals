@@ -2,27 +2,45 @@
     "$schema": "https://json.schemastore.org/chrome-manifest",
     "manifest_version": 3,
     "name": "KartPals",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A lightweight, customizable, and privacy-focused Smash Karts extension with many features.",
     "permissions": [
         "tabs",
         "scripting",
         "storage",
-        "browserSettings",
         "topSites"
     ],
-    "developer": {
-        "name": "KartPals Team",
-        "url": "https://github.com/KartPals"
+    "background": {
+        "service_worker": "oBackground.js"
     },
     "host_permissions": [],
     "web_accessible_resources": [
         {
             "resources": [
-                "/**/*.html",
-                "/*.js"
+                "**/*.html",
+                "bFetchOverride.js"
             ],
-            "matches": ["<all_urls>"]
+            "matches": [
+                "https://smashkarts.io/*",
+                "https://skunblocked.com/*",
+                "https://ghp1tallteam.github.io/*",
+                "https://geometrykarts.com/*"
+            ]
         }
-    ]
+    ],
+    "content_scripts": [
+        {
+            "js": ["index.js"],
+            "run_at": "document_idle",
+            "matches": [
+                "https://smashkarts.io/*",
+                "https://skunblocked.com/*",
+                "https://ghp1tallteam.github.io/*",
+                "https://geometrykarts.com/*"
+            ]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
 }

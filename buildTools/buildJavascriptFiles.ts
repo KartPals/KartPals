@@ -51,8 +51,6 @@ function getParentDirectory(filePath: string) {
                 minify: true,
                 sourcemap: "linked",
                 format: "esm",
-                globalName: "globalThis",
-                target: "esnext",
                 platform: "browser",
                 logLevel: "info",
                 keepNames: false,

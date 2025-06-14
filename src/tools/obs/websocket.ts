@@ -1,3 +1,3 @@
-export default await import("obsw.js").then(({ OBSWebSocket }) => {
-    return new OBSWebSocket();
-});
+import { OBSWebSocket } from "obsw.js";
+
+export default new OBSWebSocket();

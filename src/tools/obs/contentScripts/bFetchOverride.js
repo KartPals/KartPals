@@ -14,6 +14,7 @@
                             payload = JSON.parse(payload);
                         } catch {}
                     }
+                    console.log("[ByteBrew] Request intercepted:", payload);
                     window.postMessage({
                         type: "BYTEBREW_LOG_PAYLOAD",
                         payload,

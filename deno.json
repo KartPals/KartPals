@@ -30,7 +30,14 @@
         "indentWidth": 4,
         "singleQuote": false,
         "quoteProps": "asNeeded",
-        "semiColons": true
+        "semiColons": true,
+        "newLineKind": "crlf"
     },
-    "nodeModulesDir": "auto"
+    "nodeModulesDir": "auto",
+    "tasks": {
+        "btsRunAll": {
+            "command": "deno run --allow-all ./btsRunAll.ts",
+            "description": "Runs all the build tools in complete alphabetical order"
+        }
+    }
 }

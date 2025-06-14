@@ -1,5 +1,7 @@
 // This file reuses some code from "../howManyTabs/script.js," but it's ok.
 
+import domainRegexBuilder from "../../utils/domainRegexBuilder.js";
+
 chrome.tabs.query({ currentWindow: true }, (tabs) => {
     const smashKartsDomains = [
         "smashkarts.io",
@@ -20,4 +22,11 @@ chrome.tabs.query({ currentWindow: true }, (tabs) => {
     const smashKartsCount = smashKartsTabs.length - 1;
 
     globalThis.smashKartsCount = smashKartsCount;
+
+    const countSpan = document.querySelector(
+        'span[style*="font-size: 2.8rem"]',
+    );
+    if (countSpan) {
+        countSpan.textContent = smashKartsCount;
+    }
 });
