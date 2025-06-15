@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/tools/obs/oBackground.ts"],
+  "sourcesContent": ["chrome.runtime.onMessage.addListener((message, sender) => {\r\n    if (message.type === \"INJECT_BFETCH_OVERRIDE\" && sender.tab?.id) {\r\n        chrome.scripting.executeScript({\r\n            target: { tabId: sender.tab.id },\r\n            files: [\"bFetchOverride.js\"],\r\n            world: \"MAIN\",\r\n        }).catch((error) => console.error(error));\r\n    }\r\n});\r\n"],
+  "mappings": "AAAA,OAAO,QAAQ,UAAU,YAAY,CAACA,EAASC,IAAW,CAClDD,EAAQ,OAAS,0BAA4BC,EAAO,KAAK,IACzD,OAAO,UAAU,cAAc,CAC3B,OAAQ,CAAE,MAAOA,EAAO,IAAI,EAAG,EAC/B,MAAO,CAAC,mBAAmB,EAC3B,MAAO,MACX,CAAC,EAAE,MAAOC,GAAU,QAAQ,MAAMA,CAAK,CAAC,CAEhD,CAAC",
+  "names": ["message", "sender", "error"]
+}

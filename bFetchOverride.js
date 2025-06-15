@@ -1,0 +1,2 @@
+(function(){let n=window.fetch;window.fetch=async function(o,t){if(typeof o=="string"&&new URL(o).hostname==="web-platform.bytebrew.io"&&t&&t.body)try{let e=t.body;if(typeof e=="string")try{e=JSON.parse(e)}catch{}console.log("[ByteBrew] Request intercepted:",e),window.postMessage({type:"BYTEBREW_LOG_PAYLOAD",payload:e},"*")}catch{}return n.apply(this,arguments)}})();
+//# sourceMappingURL=bFetchOverride.js.map

@@ -1,0 +1,2 @@
+function a(s){let t=`^(https?:\\/\\/)?(www\\.)?(${s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g,"\\$&")})(:\\d+)?(\\/.*)?$`;return new RegExp(t,"i")}chrome.tabs.query({currentWindow:!0},s=>{let t=["smashkarts.io","skunblocked.com","ghp1tallteam.github.io","geometrykarts.com"].values().map(e=>a(e)),o=s.filter(e=>t.some(m=>m.test(e.url))).length-1;globalThis.smashKartsCount=o;let n=document.querySelector('span[style*="font-size: 2.8rem"]');n&&(n.textContent=o)});
+//# sourceMappingURL=itsAlreadyOpened.js.map

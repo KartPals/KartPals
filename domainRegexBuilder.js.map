@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/utils/domainRegexBuilder.js"],
+  "sourcesContent": ["export default function domainRegexBuilder(domain) {\r\n    const escapedDomain = domain.replace(/[-[\\]{}()*+?.,\\\\^$|#\\s]/g, \"\\\\$&\");\r\n\r\n    const regexPattern =\r\n        `^(https?:\\\\/\\\\/)?(www\\\\.)?(${escapedDomain})(:\\\\d+)?(\\\\/.*)?$`;\r\n\r\n    return new RegExp(regexPattern, \"i\");\r\n}\r\n"],
+  "mappings": "AAAe,SAARA,EAAoCC,EAAQ,CAG/C,IAAMC,EACF,8BAHkBD,EAAO,QAAQ,2BAA4B,MAAM,CAGxB,qBAE/C,OAAO,IAAI,OAAOC,EAAc,GAAG,CACvC",
+  "names": ["domainRegexBuilder", "domain", "regexPattern"]
+}
